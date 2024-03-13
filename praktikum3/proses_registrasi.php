@@ -4,9 +4,13 @@ $nim = $_POST['nim'];
 $nama = $_POST['nama'];
 $jk = $_POST['jk'];
 $prodi = $_POST['prodi'];
-$skills = $_POST["skills"];
+$skills = $_POST["skills"]??null;
 $domisili = $_POST["domisili"];
 $email = $_POST["email"];
+
+if ($skills == null) {
+    $skills = [];
+}
 
 $nilai_skills = [
     "HTML" => 10,
